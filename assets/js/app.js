@@ -11,7 +11,7 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 
 // project required variable
 
-
+let scrollWrapperid = document.getElementById("scrollWrapperid");
 let weatherForecast = document.getElementById("weatherForecast")
 let advicesBoxBtn = document.getElementById("advicesBoxBtn");
 let forecastBoxBtn = document.getElementById("forecastBoxBtn");
@@ -58,7 +58,7 @@ let wensClick = document.getElementById("wensClick");
 let thursClick = document.getElementById("thursClick");
 let friClick = document.getElementById("friClick");
 
-console.log(friClick);
+
 
 let advices = document.getElementById("advices");
 
@@ -76,12 +76,19 @@ let perScrollBtn = document.getElementById("perScrollBtn")
 
 let perImage = document.getElementById("perImage")
 let nextImage = document.getElementById("nextImage")
+let mobile__wrapper = document.getElementById('mobile__wrapper')
+let container = document.getElementById("container")
 
+ 
+
+ 
 
 // here i tested a simple function with (add event listener  and pure function) it dosent work
 
 
-let mobile__wrapper = document.getElementById('mobile__wrapper')
+
+
+
 
 wrapperscroll.addEventListener('scroll' , function(){
 if(wrapperscroll.scrollLeft === 0){
@@ -91,12 +98,14 @@ if(wrapperscroll.scrollLeft === 0){
 }
 }
 )
-if (mobile__wrapper.innerWidth > 943){
-}else{
+
 let clickCount = 1;
+
+
+
 nextScrollBtn.addEventListener(  'click' , function(){
 
-wrapperscroll.scrollBy(-110,0)
+wrapperscroll.scrollBy(-140,0)
 
 
   clickCount++;
@@ -104,31 +113,130 @@ wrapperscroll.scrollBy(-110,0)
   if (clickCount === 1) { //شنبه
     perImage.style.display = 'none'
   One.click()
+  One.style.boxShadow = "2px 2px 7px darkgray";
+Tow.style.boxShadow = "none";
+Three.style.boxShadow = "none";
+Four.style.boxShadow = "none";
+Five.style.boxShadow = "none";
+Six.style.boxShadow = "none";
+seven.style.boxShadow = "none";
+
+One.style.border = "3px black  dashed";
+Tow.style.border = "1px black solid";
+Three.style.border = "1px black solid";
+Four.style.border = "1px black solid";
+Five.style.border = "1px black solid";
+Six.style.border = "1px black solid";
+seven.style.border = "1px black solid";
  
   } else if (clickCount === 2) { // یکشنبه
 Tow.click()
+One.style.boxShadow = "none";
+Tow.style.boxShadow = "2px 2px 7px darkgray ";
+Three.style.boxShadow = "none";
+Four.style.boxShadow = "none";
+Five.style.boxShadow = "none";
+Six.style.boxShadow = "none";
+seven.style.boxShadow = "none";
 
+One.style.border = "1px black solid ";
+Tow.style.border = "3px black  dashed";
+Three.style.border = " 1px black solid  ";
+Four.style.border = "1px black solid";
+Five.style.border = "1px black solid";
+Six.style.border = "1px black solid";
+seven.style.border = "1px black solid";
 perImage.style.display = 'inline'
 
   }else if (clickCount === 3) { // دوشنبه
-
+    One.style.boxShadow = "none";
+    Tow.style.boxShadow = "none";
+    Three.style.boxShadow = "2px 2px 7px darkgray ";
+    Four.style.boxShadow = "none";
+    Five.style.boxShadow = "none";
+    Six.style.boxShadow = "none";
+    seven.style.boxShadow = "none";
+    
+    One.style.border = "1px black  solid";
+    Tow.style.border = "1px black solid";
+    Three.style.border = "3px black  dashed";
+    Four.style.border = "1px black solid";
+    Five.style.border = "1px black solid";
+    Six.style.border = "1px black solid";
+    seven.style.border = "1px black solid";
 Three.click()
 perImage.style.display = 'inline'
   }else if (clickCount === 4) { // سه شنبه
+    One.style.boxShadow = "none";
+    Tow.style.boxShadow = "none";
+    Three.style.boxShadow = "none";
+    Four.style.boxShadow = "2px 2px 7px darkgray ";
+    Five.style.boxShadow = "none";
+    Six.style.boxShadow = "none";
+    seven.style.boxShadow = "none";
     
+    One.style.border = "1px black solid ";
+    Tow.style.border = "1px black solid";
+    Three.style.border = "1px black solid";
+    Four.style.border = "3px black  dashed";
+    Five.style.border = " 1px black solid  ";
+    Six.style.border = "1px black solid";
+    seven.style.border = "1px black solid";
 
 Four.click()
 perImage.style.display = 'inline'
   }else if (clickCount === 5) { // چهارشنبه
-
+    One.style.boxShadow = "none";
+    Tow.style.boxShadow = "none";
+    Three.style.boxShadow = "none";
+    Four.style.boxShadow = "none";
+    Five.style.boxShadow = "2px 2px 7px darkgray ";
+    Six.style.boxShadow = "none";
+    seven.style.boxShadow = "none";
+    
+    One.style.border = "1px black  solid";
+    Tow.style.border = "1px black solid";
+    Three.style.border = "1px black solid";
+    Four.style.border = "1px black solid";
+    Five.style.border = "3px black  dashed";
+    Six.style.border = "1px black solid";
+    seven.style.border = "1px black solid";
 Five.click()
 perImage.style.display = 'inline'
   }else if (clickCount === 6) { // پنجشنبه
-   
+    One.style.boxShadow = "none";
+    Tow.style.boxShadow = "none";
+    Three.style.boxShadow = "none";
+    Four.style.boxShadow = "none";
+    Five.style.boxShadow = "none";
+    Six.style.boxShadow = "2px 2px 7px darkgray ";
+    seven.style.boxShadow = "none";
+    
+    One.style.border = "1px black  solid";
+    Tow.style.border = "1px black solid";
+    Three.style.border = "1px black solid";
+    Four.style.border = "1px black solid";
+    Five.style.border = "1px black solid";
+    Six.style.border = "3px black  dashed";
+    seven.style.border = "1px black solid";
 Six.click()
 perImage.style.display = 'inline'
   }else if (clickCount === 7) { // جمعه
+    One.style.boxShadow = "none";
+  Tow.style.boxShadow = "none";
+  Three.style.boxShadow = "none";
+  Four.style.boxShadow = "none";
+  Five.style.boxShadow = "none";
+  Six.style.boxShadow = "none";
+  seven.style.boxShadow = "2px 2px 7px darkgray ";
   
+  One.style.border = "1px black  solid";
+  Tow.style.border = "1px black solid";
+  Three.style.border = "1px black solid";
+  Four.style.border = "1px black solid";
+  Five.style.border = "1px black solid";
+  Six.style.border = "1px black solid";
+  seven.style.border = "3px black  dashed";
 seven.click()
 perImage.style.display = 'inline'
   }else if (clickCount  > 7) {
@@ -141,28 +249,160 @@ perImage.style.display = 'inline'
 
 }  )
 
-console.log(clickCount);
+
 
 perScrollBtn.addEventListener(  'click' , function(){
 
-  wrapperscroll.scrollBy(110,0)
+  wrapperscroll.scrollBy(140,0)
 nextImage.style.display = 'inline'
 
  clickCount--; 
- if (  clickCount < 1 ){
+ if (clickCount === 1) { //شنبه
+  perImage.style.display = 'none'
+One.click()
+One.style.boxShadow = "2px 2px 7px darkgray";
+Tow.style.boxShadow = "none";
+Three.style.boxShadow = "none";
+Four.style.boxShadow = "none";
+Five.style.boxShadow = "none";
+Six.style.boxShadow = "none";
+seven.style.boxShadow = "none";
 
-  clickCount = 1
+One.style.border = "3px black  dashed";
+Tow.style.border = "1px black solid";
+Three.style.border = "1px black solid";
+Four.style.border = "1px black solid";
+Five.style.border = "1px black solid";
+Six.style.border = "1px black solid";
+seven.style.border = "1px black solid";
+
+} else if (clickCount === 2) { // یکشنبه
+Tow.click()
+One.style.boxShadow = "none";
+Tow.style.boxShadow = "2px 2px 7px darkgray ";
+Three.style.boxShadow = "none";
+Four.style.boxShadow = "none";
+Five.style.boxShadow = "none";
+Six.style.boxShadow = "none";
+seven.style.boxShadow = "none";
+
+One.style.border = "1px black solid ";
+Tow.style.border = "3px black  dashed";
+Three.style.border = " 1px black solid  ";
+Four.style.border = "1px black solid";
+Five.style.border = "1px black solid";
+Six.style.border = "1px black solid";
+seven.style.border = "1px black solid";
+perImage.style.display = 'inline'
+
+}else if (clickCount === 3) { // دوشنبه
+  One.style.boxShadow = "none";
+  Tow.style.boxShadow = "none";
+  Three.style.boxShadow = "2px 2px 7px darkgray ";
+  Four.style.boxShadow = "none";
+  Five.style.boxShadow = "none";
+  Six.style.boxShadow = "none";
+  seven.style.boxShadow = "none";
+  
+  One.style.border = "1px black  solid";
+  Tow.style.border = "1px black solid";
+  Three.style.border = "3px black  dashed";
+  Four.style.border = "1px black solid";
+  Five.style.border = "1px black solid";
+  Six.style.border = "1px black solid";
+  seven.style.border = "1px black solid";
+Three.click()
+perImage.style.display = 'inline'
+}else if (clickCount === 4) { // سه شنبه
+  One.style.boxShadow = "none";
+  Tow.style.boxShadow = "none";
+  Three.style.boxShadow = "none";
+  Four.style.boxShadow = "2px 2px 7px darkgray ";
+  Five.style.boxShadow = "none";
+  Six.style.boxShadow = "none";
+  seven.style.boxShadow = "none";
+  
+  One.style.border = "1px black solid ";
+  Tow.style.border = "1px black solid";
+  Three.style.border = "1px black solid";
+  Four.style.border = "3px black  dashed";
+  Five.style.border = " 1px black solid  ";
+  Six.style.border = "1px black solid";
+  seven.style.border = "1px black solid";
+
+Four.click()
+perImage.style.display = 'inline'
+}else if (clickCount === 5) { // چهارشنبه
+  One.style.boxShadow = "none";
+  Tow.style.boxShadow = "none";
+  Three.style.boxShadow = "none";
+  Four.style.boxShadow = "none";
+  Five.style.boxShadow = "2px 2px 7px darkgray ";
+  Six.style.boxShadow = "none";
+  seven.style.boxShadow = "none";
+  
+  One.style.border = "1px black  solid";
+  Tow.style.border = "1px black solid";
+  Three.style.border = "1px black solid";
+  Four.style.border = "1px black solid";
+  Five.style.border = "3px black  dashed";
+  Six.style.border = "1px black solid";
+  seven.style.border = "1px black solid";
+Five.click()
+perImage.style.display = 'inline'
+}else if (clickCount === 6) { // پنجشنبه
+  One.style.boxShadow = "none";
+  Tow.style.boxShadow = "none";
+  Three.style.boxShadow = "none";
+  Four.style.boxShadow = "none";
+  Five.style.boxShadow = "none";
+  Six.style.boxShadow = "2px 2px 7px darkgray ";
+  seven.style.boxShadow = "none";
+  
+  One.style.border = "1px black  solid";
+  Tow.style.border = "1px black solid";
+  Three.style.border = "1px black solid";
+  Four.style.border = "1px black solid";
+  Five.style.border = "1px black solid";
+  Six.style.border = "3px black  dashed";
+  seven.style.border = "1px black solid";
+Six.click()
+perImage.style.display = 'inline'
+}else if (clickCount === 7) { // جمعه
+  One.style.boxShadow = "none";
+Tow.style.boxShadow = "none";
+Three.style.boxShadow = "none";
+Four.style.boxShadow = "none";
+Five.style.boxShadow = "none";
+Six.style.boxShadow = "none";
+seven.style.boxShadow = "2px 2px 7px darkgray ";
+
+One.style.border = "1px black  solid";
+Tow.style.border = "1px black solid";
+Three.style.border = "1px black solid";
+Four.style.border = "1px black solid";
+Five.style.border = "1px black solid";
+Six.style.border = "1px black solid";
+seven.style.border = "3px black  dashed";
+seven.click()
+perImage.style.display = 'inline'
+}else if (clickCount  < 1 ) {
+
+  clickCount = 1;
   One.click();
+  perImage.style.display = 'none'
+  
 }
+
 
 
 }  )
 
 
-}
 
 
 
+;
 // automatic scroll in days weather 
 
 
@@ -170,18 +410,20 @@ nextImage.style.display = 'inline'
 
 
 mobile__wrapper.addEventListener('scroll', function() {
-  var verticalScroll = window.scrollY;
-  this.document.getElementById('wrapperscroll').scroll( -verticalScroll / 7   ,  0);
+  var verticalScroll = mobile__wrapper.scrollTop;
+  wrapperscroll.scroll( -verticalScroll / 7   ,  0);
 });
+
+
+
 
 One.style.boxShadow = "2px 2px 7px darkgray";
 One.style.border = "3px black  dashed";
 // choosing selected day base by y scroll in window
 
 mobile__wrapper.addEventListener(  'scroll' ,  function(){
-
-if (mobile__wrapper.scrollY <= 530){
-
+if ( mobile__wrapper.scrollTop <= 530){
+clickCount = 1
 
 One.style.boxShadow = "2px 2px 7px darkgray";
 Tow.style.boxShadow = "none";
@@ -200,10 +442,9 @@ Six.style.border = "1px black solid";
 seven.style.border = "1px black solid";
 
 }
-else if (mobile__wrapper.scrollY > 530  &&  mobile__wrapper.scrollY < 1050){
+else if (mobile__wrapper.scrollTop > 530  &&  mobile__wrapper.scrollTop < 1050){
 
-
-
+  clickCount = 2
   One.style.boxShadow = "none";
   Tow.style.boxShadow = "2px 2px 7px darkgray ";
   Three.style.boxShadow = "none";
@@ -222,9 +463,9 @@ else if (mobile__wrapper.scrollY > 530  &&  mobile__wrapper.scrollY < 1050){
 
 
 }
-else if (mobile__wrapper.scrollY >1050   &&  mobile__wrapper.scrollY < 1600){
+else if (mobile__wrapper.scrollTop >1050   &&  mobile__wrapper.scrollTop < 1600){
 
-
+  clickCount = 3
 
   One.style.boxShadow = "none";
   Tow.style.boxShadow = "none";
@@ -242,7 +483,9 @@ else if (mobile__wrapper.scrollY >1050   &&  mobile__wrapper.scrollY < 1600){
   Six.style.border = "1px black solid";
   seven.style.border = "1px black solid";
 }
-else if (mobile__wrapper.scrollY >1600   &&  mobile__wrapper.scrollY < 2100 ){
+else if (mobile__wrapper.scrollTop >1600   &&  mobile__wrapper.scrollTop < 2100 ){
+
+  clickCount = 4
 
   One.style.boxShadow = "none";
   Tow.style.boxShadow = "none";
@@ -260,7 +503,9 @@ else if (mobile__wrapper.scrollY >1600   &&  mobile__wrapper.scrollY < 2100 ){
   Six.style.border = "1px black solid";
   seven.style.border = "1px black solid";
 }
-else if (mobile__wrapper.scrollY >2100   &&  mobile__wrapper.scrollY < 2600 ){
+else if (mobile__wrapper.scrollTop >2100   &&  mobile__wrapper.scrollTop < 2600 ){
+
+  clickCount = 5
 
   One.style.boxShadow = "none";
   Tow.style.boxShadow = "none";
@@ -277,8 +522,9 @@ else if (mobile__wrapper.scrollY >2100   &&  mobile__wrapper.scrollY < 2600 ){
   Five.style.border = "3px black  dashed";
   Six.style.border = "1px black solid";
   seven.style.border = "1px black solid";
-}else if (mobile__wrapper.scrollY  > 2600 && mobile__wrapper.scrollY < 3130  ){
+}else if (mobile__wrapper.scrollTop  > 2600 && mobile__wrapper.scrollTop < 3130  ){
 
+  clickCount = 6
 
   One.style.boxShadow = "none";
   Tow.style.boxShadow = "none";
@@ -295,9 +541,9 @@ else if (mobile__wrapper.scrollY >2100   &&  mobile__wrapper.scrollY < 2600 ){
   Five.style.border = "1px black solid";
   Six.style.border = "3px black  dashed";
   seven.style.border = "1px black solid";
-}else if (mobile__wrapper.scrollY > 3130 ){
+}else if (mobile__wrapper.scrollTop > 3130 ){
 
-  
+  clickCount = 7
 
   One.style.boxShadow = "none";
   Tow.style.boxShadow = "none";
@@ -321,31 +567,166 @@ else if (mobile__wrapper.scrollY >2100   &&  mobile__wrapper.scrollY < 2600 ){
 
 
 
-// click function in days will bring you there
 
+
+
+// getting height of all tables
+
+let Scroll = (mobile__wrapper.scrollHeight - stickToHead.scrollHeight) / 7
+
+console.log(Scroll);
+
+
+let scrollSize = scrollWrapperid.clientHeight / 7
+let endscrollSize = Math.floor(scrollSize)
 
 saterClick.addEventListener( 'click' , function(){
 mobile__wrapper.scrollTo( 0 , 0  )
+clickCount === 1
+
+
+One.style.boxShadow = "2px 2px 7px darkgray";
+Tow.style.boxShadow = "none";
+Three.style.boxShadow = "none";
+Four.style.boxShadow = "none";
+Five.style.boxShadow = "none";
+Six.style.boxShadow = "none";
+seven.style.boxShadow = "none";
+
+One.style.border = "3px black  dashed";
+Tow.style.border = "1px black solid";
+Three.style.border = "1px black solid";
+Four.style.border = "1px black solid";
+Five.style.border = "1px black solid";
+Six.style.border = "1px black solid";
+seven.style.border = "1px black solid";
+
 } )
 sundayClick.addEventListener( 'click' , function(){
-mobile__wrapper.scrollTo( 0 , 550  )
+mobile__wrapper.scrollTo( 0 ,   endscrollSize  )
+clickCount = 2
+
+One.style.boxShadow = "none";
+Tow.style.boxShadow = "2px 2px 7px darkgray ";
+Three.style.boxShadow = "none";
+Four.style.boxShadow = "none";
+Five.style.boxShadow = "none";
+Six.style.boxShadow = "none";
+seven.style.boxShadow = "none";
+
+One.style.border = "1px black solid ";
+Tow.style.border = "3px black  dashed";
+Three.style.border = " 1px black solid  ";
+Four.style.border = "1px black solid";
+Five.style.border = "1px black solid";
+Six.style.border = "1px black solid";
+seven.style.border = "1px black solid";
 } )
 mondayClick.addEventListener( 'click' , function(){
-mobile__wrapper.scrollTo( 0 , 1100  )
+mobile__wrapper.scrollTo( 0 ,  endscrollSize * 2  )
+
+clickCount = 3
+
+One.style.boxShadow = "none";
+Tow.style.boxShadow = "none";
+Three.style.boxShadow = "2px 2px 7px darkgray ";
+Four.style.boxShadow = "none";
+Five.style.boxShadow = "none";
+Six.style.boxShadow = "none";
+seven.style.boxShadow = "none";
+
+One.style.border = "1px black  solid";
+Tow.style.border = "1px black solid";
+Three.style.border = "3px black  dashed";
+Four.style.border = "1px black solid";
+Five.style.border = "1px black solid";
+Six.style.border = "1px black solid";
+seven.style.border = "1px black solid";
 } )
 tuesClick.addEventListener( 'click' , function(){
-mobile__wrapper.scrollTo( 0 , 1650  )
+mobile__wrapper.scrollTo( 0 ,  endscrollSize * 3 )
+
+clickCount = 4
+
+One.style.boxShadow = "none";
+Tow.style.boxShadow = "none";
+Three.style.boxShadow = "none";
+Four.style.boxShadow = "2px 2px 7px darkgray ";
+Five.style.boxShadow = "none";
+Six.style.boxShadow = "none";
+seven.style.boxShadow = "none";
+
+One.style.border = "1px black solid ";
+Tow.style.border = "1px black solid";
+Three.style.border = "1px black solid";
+Four.style.border = "3px black  dashed";
+Five.style.border = " 1px black solid  ";
+Six.style.border = "1px black solid";
+seven.style.border = "1px black solid";
 } )
 wensClick.addEventListener( 'click' , function(){
-mobile__wrapper.scrollTo( 0 , 2150  )
+mobile__wrapper.scrollTo( 0 , endscrollSize * 4  )
+
+clickCount = 5
+
+One.style.boxShadow = "none";
+Tow.style.boxShadow = "none";
+Three.style.boxShadow = "none";
+Four.style.boxShadow = "none";
+Five.style.boxShadow = "2px 2px 7px darkgray ";
+Six.style.boxShadow = "none";
+seven.style.boxShadow = "none";
+
+One.style.border = "1px black  solid";
+Tow.style.border = "1px black solid";
+Three.style.border = "1px black solid";
+Four.style.border = "1px black solid";
+Five.style.border = "3px black  dashed";
+Six.style.border = "1px black solid";
+seven.style.border = "1px black solid";
 } )
 thursClick.addEventListener( 'click' , function(){
-mobile__wrapper.scrollTo( 0 , 2650  )
+mobile__wrapper.scrollTo( 0 , endscrollSize * 5  )
+
+clickCount = 6
+
+One.style.boxShadow = "none";
+Tow.style.boxShadow = "none";
+Three.style.boxShadow = "none";
+Four.style.boxShadow = "none";
+Five.style.boxShadow = "none";
+Six.style.boxShadow = "2px 2px 7px darkgray ";
+seven.style.boxShadow = "none";
+
+One.style.border = "1px black  solid";
+Tow.style.border = "1px black solid";
+Three.style.border = "1px black solid";
+Four.style.border = "1px black solid";
+Five.style.border = "1px black solid";
+Six.style.border = "3px black  dashed";
+seven.style.border = "1px black solid";
 } )
 friClick.addEventListener( 'click' , function(){
-mobile__wrapper.scrollTo( 0 , 3230  )
-} )
+mobile__wrapper.scrollTo( 0 , endscrollSize * 6  )
 
+clickCount = 7
+
+One.style.boxShadow = "none";
+Tow.style.boxShadow = "none";
+Three.style.boxShadow = "none";
+Four.style.boxShadow = "none";
+Five.style.boxShadow = "none";
+Six.style.boxShadow = "none";
+seven.style.boxShadow = "2px 2px 7px darkgray ";
+
+One.style.border = "1px black  solid";
+Tow.style.border = "1px black solid";
+Three.style.border = "1px black solid";
+Four.style.border = "1px black solid";
+Five.style.border = "1px black solid";
+Six.style.border = "1px black solid";
+seven.style.border = "3px black  dashed";
+} )
 
 
 
